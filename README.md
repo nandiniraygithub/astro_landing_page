@@ -28,13 +28,13 @@
 </head>
 <body>
 
-    <h1>Astrology Website</h1>
+<h1>Astrology Website</h1>
     <p>Welcome to the Astrology Website project! This website provides astrological insights and horoscopes. It is designed to be responsive and user-friendly on both desktop and mobile devices.</p>
 
-    <h2>Demo Link</h2>
+<h2>Demo Link</h2>
     <p>Check out the live demo of the website <a href="https://your-demo-link.com">here</a>.</p>
 
-    <h2>Features</h2>
+<h2>Features</h2>
     <ul>
         <li>Daily horoscopes</li>
         <li>Astrological chart generation</li>
