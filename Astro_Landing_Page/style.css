@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary-color: #B57A01;
+    --secondary-color: #FFE6A8;
+    --text-color: #ffffff;
+    --dark-bg: #000000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--dark-bg), var(--dark-bg));
+    color: var(--text-color);
+    margin: 0;
+    padding-top: 80px;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+}
+
+.logo-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 20px;
+
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.navbar-toggle {
+    display: none;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Section Styles */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+#home { background-image: url('img/img1.gif'); }
+#about { background-image: url('img/bg_5.png'); }
+#services { background-image: url('img/hero2/bg-3.png'); }
+#contact { background-image: url('img/bg_4._0.png'); }
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1, 
+.hero-content h2 {
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    margin-bottom: 30px;
+}
+
+/* Image Container */
+.image-container {
+    max-width: 50%;
+    margin-top: 30px;
+}
+
+.image-container img {
+    max-width: 80%;
+    height: auto;
+}
+
+/* Horizontal Scrolling */
+#about.hero-section {
+    position: relative;
+    padding-top: 80px; /* scrolling text की ऊंचाई के बराबर */
+}
+
+.horizontal-scrolling-container {
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* पृष्ठभूमि को थोड़ा गहरा करें */
+    z-index: 10;
+}
+
+.horizontal-scrolling-items {
+    display: flex;
+    animation: scroll 10s linear infinite;
+    width: 200%;
+}
+
+.horizontal-scrolling-item {
+    white-space: nowrap;
+    margin-right: 50px;
+    font-size: 3rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    color: #ffffff; /* सुनिश्चित करें कि टेक्स्ट सफेद हो */
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* मोबाइल के लिए रेस्पॉन्सिव डिज़ाइन */
+@media (max-width: 768px) {
+    .horizontal-scrolling-item {
+        font-size: 2rem; /* मोबाइल पर फ़ॉन्ट साइज़ कम करें */
+    }
+}
+
+/* Card Styles */
+
+.hero-section {
+   display: flex;
+      top:50%;
+    position: relative;
+    padding: 100px 20px 50px;
+    
+    text-align: center;
+}
+
+.hero-section .section-title {
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 3px;
+}
+
+.cards-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    padding: 20px;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+/* मोबाइल के लिए रेस्पॉन्सिव डिज़ाइन */
+@media (max-width: 768px) {
+    .hero-section .section-title {
+        font-size: 3rem;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+/* Contact Styles */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-info, .contact-form {
+    flex-basis: calc(50% - 20px);
+}
+
+.contact-info-item {
+    margin-bottom: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid var(--text-color);
+    background: transparent;
+    color: var(--text-color);
+}
+
+.contact-form label {
+    color: var(--text-color);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .contact-info, .contact-form {
+        flex-basis: 100%;
+    }
+}
