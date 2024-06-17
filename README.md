@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astrology Website README</title>
-    <style>
+    <title>Astrology Website </title>
+  
 
 </head>
 <body>
